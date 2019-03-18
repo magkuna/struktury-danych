@@ -1,15 +1,15 @@
 
-const owoce = ['Kiwi', 'Mango', 'Ananas', 'Grapefruit'];
+const letter = ['Kiwi', 'Mango', 'Ananas', 'Grapefruit'];
 
-const filteredFruit = []
+const Fruit = ' '
 
 const body = document.body
 
 const render = (what,where) => {
-   what = owoce.filter ( (element,index,array) => 
-element.length >= 6 && element.length < 10 )
+    what = letter.find ( ( element,index,array) => 
+ element.indexOf('A') ===0  )
 
-where.innerHTML= what
+where.innerHTML= what 
 
 }
-render (filteredFruit, body)
+render (Fruit, body)
