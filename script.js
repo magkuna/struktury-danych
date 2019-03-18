@@ -18,11 +18,11 @@ var body = document.body;
 var owoce = ['Kiwi', 'Mango', 'Ananas', 'Grapefruit'];
 render(tekst, body, owoce);*/
 
-const render = (what,where) =>{
+/*const render = (what,where) =>{
 
 what += '<ol>'
 
-owoce.forEach ( (element, index, array) => { what += '<li>' + element + ' (' + index + ')</li>'
+owoce.forEach ( (element, index, array) => { what += '<li>' + element +  ' ('  + index +  ')</li>'
 });
 
 what += '</ol>'
@@ -33,5 +33,21 @@ where.innerHTML += 'Zwrócony typ danych: <strong>' + typeof what + '</strong>';
 
 const owoce = ['Kiwi', 'Mango', 'Ananas', 'Grapefruit'];
 let html = ''
-let div = document.querySelector('div')
-render (html, div)
+let body = document.body
+render (html, body)*/
+
+const owoce = ['Kiwi', 'Mango', 'Ananas', 'Grapefruit'];
+
+const newArray = []
+
+const body = document.body;
+
+const render = (what,where) => {
+    what = owoce.map ( function(element,index,array)   {
+        return element + " - obszar uprawy:tereny tropikalne"
+} )
+     where.innerHTML = what;
+}
+
+
+render (newArray, body);
