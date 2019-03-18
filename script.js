@@ -1,16 +1,30 @@
+const osoby = [
+    {
+        imie: 'Jan',
+        nazwisko: 'Kowalski',
+        wiek: 18,
+        imieNazwisko: function() { return this.imie + ' ' + this.nazwisko; }
+    },
+    {
+        imie: 'Maria',
+        nazwisko: 'Nowak',
+        wiek: 21,
+        imieNazwisko: function() { return this.imie + ' ' + this.nazwisko; }
+    }
+];
 
-const letter = ['Kiwi', 'Mango', 'Ananas', 'Grapefruit'];
+let table = '';
 
-const Fruit = ' '
-
-const body = document.body
-
-const render = (what,where) => {
-    what = letter.find ( ( element,index,array) => 
- element.indexOf('A') ===0  )
-
- 
-where.innerHTML= what 
-
+table += '<table>';
+table += '<tr><th>Imię i Nazwisko</th><th>Wiek</th></tr>'
+for (property in osoby ){
+    table +='<tr><td>' + osoby[property].imieNazwisko()  + '</td><td>' + osoby[property].wiek  + '</td></tr>'
+    
 }
-render (Fruit, body)
+table += '</table>';
+
+document.body.innerHTML = table;
+            
+        
+        
+    
