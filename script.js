@@ -1,14 +1,27 @@
-const sentence =  'Lorem, ipsum, dolor, sit, ament'
-
-const paragraph = document.createElement('p')
-const text = document.createTextNode(' Przykładowy napis: ')
-const arrayText = document.createTextNode (Object.values(sentence));
+const osoby = [
+    {
+        imie: 'Jan',
+        nazwisko: 'Kowalski',
+        wiek: 18,
+        imieNazwisko: function() { 
+            return `${this.imie} ${this.nazwisko}`;
+        }
+    },
+    {
+        imie: 'Maria',
+        nazwisko: 'Nowak',
+        wiek: 21,
+        imieNazwisko: function() {
+            return `${this.imie} ${this.nazwisko}`;
+        }
+    }
+];
 
 const body = document.body
 
-const render = (what,where)=> {
-what.appendChild(text)
-what.appendChild(arrayText)
-where.appendChild(what) 
+const render = (what,where) => {
+    what = Object.entries(osoby)
+    where.innerHTML = what
 }
-render (paragraph, body)
+
+render (osoby,body)
