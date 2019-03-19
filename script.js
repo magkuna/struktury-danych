@@ -1,11 +1,9 @@
-const kontynenty = ["Europa" , "Ameryka Północna", "Azja", 7, true]
-
+const sentence =  'Lorem, ipsum, dolor, sit, ament'
 
 const body = document.body
 
 const render = (what,where)=> {
-    what = Object.keys(kontynenty)
-
- where.innerHTML = what
+what = Object.values(sentence) 
+where.innerHTML = what
 }
-render (kontynenty, body);
+render (sentence, body)
