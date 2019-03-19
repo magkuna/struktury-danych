@@ -24,3 +24,20 @@ document.querySelector ('.button-array.button-array--remove').addEventListener('
     }
 
 })
+
+document.querySelector ('.button-coefficient.button-coefficient--calculate').addEventListener('click', () => {
+    fieldCoefficient = document.querySelector('.input-coefficient').value
+    
+    if (fieldCoefficient !=='' && myArray.length >0 ) {
+
+         myArray.forEach( (element,index,array) => {
+        array[index] = element * fieldCoefficient
+    })
+    document.querySelector('.info-coefficient.info-coefficient__output').innerHTML = myArray
+}else if (myArray.length == 0){
+    alert ('Twoja tablica jest pusta. Uzupełnij pole, aby przejść dalej')
+}else {
+    alert ('Podaj współczynnik')
+}
+   
+})
