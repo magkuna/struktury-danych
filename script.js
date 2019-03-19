@@ -1,30 +1,11 @@
-const osoby = [
-    {
-        imie: 'Jan',
-        nazwisko: 'Kowalski',
-        wiek: 18,
-        imieNazwisko: function() { return this.imie + ' ' + this.nazwisko; }
-    },
-    {
-        imie: 'Maria',
-        nazwisko: 'Nowak',
-        wiek: 21,
-        imieNazwisko: function() { return this.imie + ' ' + this.nazwisko; }
-    }
-];
+const kontynenty = ["Europa" , "Ameryka Północna", "Azja", 7, true]
 
-let table = '';
 
-table += '<table>';
-table += '<tr><th>Imię i Nazwisko</th><th>Wiek</th></tr>'
-for (property in osoby ){
-    table +='<tr><td>' + osoby[property].imieNazwisko()  + '</td><td>' + osoby[property].wiek  + '</td></tr>'
-    
+const body = document.body
+
+const render = (what,where)=> {
+    what = Object.keys(kontynenty)
+
+ where.innerHTML = what
 }
-table += '</table>';
-
-document.body.innerHTML = table;
-            
-        
-        
-    
+render (kontynenty, body);
